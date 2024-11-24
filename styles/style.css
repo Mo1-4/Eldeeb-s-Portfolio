@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h3 {
+    transition: .3s linear;
+}
+
+h1:hover, h3:hover {
+    transform: skew(5deg);
+    color: goldenrod;
+}
+
+nav{
+    background: linear-gradient(to top, rgba(223, 233, 243, 0.6) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+nav .container-fluid .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.subhead {
+    transition: .3s;
+}
+
+.subhead:hover {
+    color: rgb(155, 165, 44);
+}
+
+.vertical-line{
+    border-right: 1px solid black;
+    margin-left: 5px;
+}
+
+.nav-item:nth-child(2){
+    border-left: 1px solid black;
+}
+
+.nav-item a {
+    transition: .2s;
+}
+
+.nav-item a:hover {
+    transform: scale(1.1,1.1);
+}
+
+
+main{
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    height: 70vh;
+    padding: 30px;
+}
+
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 40px;
+}
+
+.flex-container .content{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 25vh;
+}
+
+.about p {
+    padding-inline: 10px;
+}
+
+.about h1, .about h3,.about p,.my-img,
+.buttons, .contact-text, .contact-form,
+.biography-content {
+    animation: opacite 1s linear 1;
+}
+
+@keyframes opacite {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .buttons .about-button,
+    .buttons .projects-button,
+    .buttons .contact-button {
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.about-button{
+    background-color:darkorange;
+}
+
+.about-button:hover{
+    background-color: rgb(244, 175, 46);
+}
+
+.projects-button{
+    background-color: chocolate;
+}
+
+.projects-button:hover{
+    background-color: coral;
+}
+
+.contact-button{
+    background-color: rgb(240, 94, 240);
+}
+
+.contact-button:hover{
+    background-color: plum;
+}
+
+.buttons .submit-button input {
+    background: none;
+    border: none;
+    font-weight: 500;
+}
+
+.buttons .about-button a,
+.buttons .projects-button a,
+.buttons .contact-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    text-decoration: none;
+    color: #333;
+    font-size: 27px;
+}
+
+footer{
+    background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    display: flex;
+    align-items: center;
+    padding: 23px;
+    border-top: 2px solid #333;
+}
+
+footer .phone a, footer .email a {
+    text-decoration: none;
+    color: rgb(162, 64, 162);
+    transition: .2s linear;
+}
+
+footer .phone a:hover, footer .email a:hover {
+    color: orangered;
+} 
+
+footer .follow a {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+footer .copyright {
+    display: flex;
+    align-items: center;
+}
+
+footer .copyright p a {
+    text-decoration: none;
+    color: rgb(162, 64, 162);
+    transition: .2s linear;
+}
+
+footer .copyright p a:hover{
+    color: #e61e6b;
+}
+
+@media (min-width: 2318px){
+    .buttons{
+        display: none;
+    }
+}
+
+@media (max-width: 1130px){
+    .flex-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    main{
+        height: 120vh;
+    }
+}
+
+
+@media (max-width: 991px){
+    nav .container-fluid  .navbar-collapse{
+        text-align: center;
+    }
+    
+    .vertical-line, .nav-item:nth-child(2){
+        border: 0;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .copyright {
+        display: block;
+    }
+
+    footer .phone,
+    footer .email,
+    footer .follow {
+        border-bottom: 1px solid #333;
+        padding-top: 10px;
+    }
+}
+
+
+@media (max-width: 549px){
+    nav .container-fluid .navbar-brand img{
+        width: 60px;
+        height: 60px;
+    }
+
+    nav .container-fluid .navbar-brand span {
+        font-size: 22px;
+    }
+
+    .buttons .contact-button{
+        margin: 0;
+    }
+}
+
+
+
+ @media (max-width: 610px){
+    .buttons .about-button,
+    .buttons .projects-button,
+    .buttons .contact-button {
+    width: 120px;
+    height: 120px;
+}
+    .buttons .about-button a,
+    .buttons .projects-button a,
+    .buttons .contact-button a  {
+    font-size: 22px;
+}
+}
+
+
+@media (max-width: 460px){
+    main{
+        height: 135vh;
+    }
+    .flex-container .my-img img{
+        height: 400px;
+    }
+}
+
